@@ -17,4 +17,4 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt/packag
 
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon openwrt/package/feeds/luci/luci-theme-argon
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config openwrt/package/feeds/luci/luci-app-argon-config
-git clone --depth=1 -b js https://github.com/kenzok78/luci-theme-design openwrt/package/feeds/luci/luci-theme-design
+git clone --depth=1 https://github.com/kenzok78/luci-theme-design openwrt/package/feeds/luci/luci-theme-design
