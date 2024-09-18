@@ -11,12 +11,12 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff package/
 git_sparse_clone main https://github.com/linkease/nas-packages-luci luci/luci-app-ddnsto
 git_sparse_clone master https://github.com/linkease/nas-packages network/services/ddnsto
 
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
-git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall
+# git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall package/luci-app-passwall
 
 
 git clone --depth=1 https://github.com/kiddin9/luci-theme-edge package/luci-theme-edge
-
+git clone --depth=1 -b js https://github.com/kenzok78/luci-theme-design package/luci-theme-design
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
