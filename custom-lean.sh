@@ -11,6 +11,5 @@ git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages openw
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt/package/luci-app-passwall
 
 
-git clone --depth=1 https://github.com/kiddin9/luci-theme-edge openwrt/package/luci-theme-edge
-git clone --depth=1 -b js https://github.com/kenzok78/luci-theme-design openwrt/package/luci-theme-design
-
+git clone --depth=1 -b 18.06 https://github.com/kiddin9/luci-theme-edge openwrt/package/luci-theme-edge
+# git clone --depth=1 https://github.com/kenzok78/luci-theme-design openwrt/package/luci-theme-design
