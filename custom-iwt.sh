@@ -13,5 +13,5 @@ git clone --depth=1 -b main https://github.com/linkease/nas-packages-luci openwr
 
 
 git clone --depth=1 -b js https://github.com/kenzok78/luci-theme-design openwrt/package/feeds/luci/luci-theme-design
-# git clone --depth=1 -b js https://github.com/sirpdboy/luci-theme-kucat openwrt/package/feeds/luci/luci-theme-kucat
+git clone --depth=1 -b js https://github.com/sirpdboy/luci-theme-kucat openwrt/package/feeds/luci/luci-theme-kucat
 
