@@ -19,4 +19,3 @@ sed -i 's/192.168.1.1/192.168.1.251/g' openwrt/package/base-files/files/bin/conf
 # git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon openwrt/package/feeds/luci/luci-theme-argon
 # git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config openwrt/package/feeds/luci/luci-app-argon-config
 # git clone --depth=1 https://github.com/kenzok78/luci-theme-design openwrt/package/feeds/luci/luci-theme-design
-git clone --depth=1 https://github.com/sirpdboy/luci-theme-kucat openwrt/package/feeds/luci/luci-theme-kucat
