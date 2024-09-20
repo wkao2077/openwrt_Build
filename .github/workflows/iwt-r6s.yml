@@ -107,11 +107,14 @@ jobs:
         make download -j$(nproc)
         find dl -size -1024c -exec rm -f {} \;
 
-    - name: Cache
-      uses: klever1988/cachewrtbuild@main
+
+    - name: Cache Toolchain
+      if: env.CACHE_TOOLCHAIN == 'true'
+      uses: HiGarfield/cachewrtbuild@main
       with:
-        ccache: 'true'
-        prefix: ${{ github.workspace }}/openwrt
+        ccache: false
+        mixkey: armv8
+        prefix: iwt-r6s
     
     - name: Check space usage
       run: |
