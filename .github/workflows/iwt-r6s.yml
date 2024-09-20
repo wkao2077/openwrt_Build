@@ -112,9 +112,9 @@ jobs:
       if: env.CACHE_TOOLCHAIN == 'true'
       uses: HiGarfield/cachewrtbuild@main
       with:
-        ccache: false
-        mixkey: armv8
-        prefix: iwt-r6s
+        ccache: 'false'
+        mixkey: 'armv8'
+        prefix: 'iwt-r6s'
     
     - name: Check space usage
       run: |
