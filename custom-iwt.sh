@@ -10,5 +10,5 @@ git clone --depth=1 https://github.com/esirplayground/luci-app-poweroff openwrt/
 
 
 git clone --depth=1 -b js https://github.com/kenzok78/luci-theme-design openwrt/package/feeds/luci/luci-theme-design
-git clone --depth=1 -b js https://github.com/sirpdboy/luci-theme-kucat openwrt/package/feeds/luci/luci-theme-kucat
+# git clone --depth=1 -b js https://github.com/sirpdboy/luci-theme-kucat openwrt/package/feeds/luci/luci-theme-kucat
 
