@@ -113,7 +113,7 @@ jobs:
       uses: HiGarfield/cachewrtbuild@main
       with:
         ccache: false
-        mixkey: 'iwt-r6s'
+        mixkey: 'iwt-x86'
         prefix: ${{ github.workspace }}/openwrt
     
     - name: Check space usage
