@@ -108,9 +108,10 @@ jobs:
         find dl -size -1024c -exec rm -f {} \;
 
     - name: Cache
-      uses: klever1988/cachewrtbuild@main
+      uses: HiGarfield/cachewrtbuild@main
       with:
         ccache: 'true'
+        mixkey: 'iwt-x86'
         prefix: ${{ github.workspace }}/openwrt
     
     - name: Check space usage
