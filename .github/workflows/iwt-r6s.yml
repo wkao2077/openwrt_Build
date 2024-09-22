@@ -113,7 +113,7 @@ jobs:
       if: env.CACHE_TOOLCHAIN == 'true'
       uses: HiGarfield/cachewrtbuild@main
       with:
-        ccache: false
+        ccache: 'true'
         mixkey: 'iwt-r6s'
         prefix: ${{ github.workspace }}/openwrt
     
