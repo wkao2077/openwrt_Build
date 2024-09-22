@@ -109,7 +109,7 @@ jobs:
         find dl -size -1024c -exec rm -f {} \;
 
     - name: Cache Toolchain
-      if: env.CACHE_TOOLCHAIN == 'true'
+      if: env.CACHE_TOOLCHAIN == 'false'
       uses: HiGarfield/cachewrtbuild@main
       with:
         ccache: 'true'
