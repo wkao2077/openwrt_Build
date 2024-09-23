@@ -22,6 +22,9 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   CACHE_TOOLCHAIN: true
+  FIRMWARE_RELEASE: true
+  FIRMWARE_TAG: rockchip_armv8
+  DEVICE_TARGET: rockchip
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
   REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
   REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
@@ -75,6 +78,7 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
+        echo "OPENWRT_PATH=$PWD" >> $GITHUB_ENV
         git clone https://github.com/wkao2077/opconfig
 
     - name: Free up disk space
@@ -115,7 +119,7 @@ jobs:
       with:
         ccache: 'false'
         mixkey: 'iwt-r6s'
-        prefix: ${{ github.workspace }}/openwrt
+        prefix: ${{ env.OPENWRT_PATH }}
     
     - name: Check space usage
       run: |
