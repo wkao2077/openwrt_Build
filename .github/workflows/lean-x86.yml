@@ -22,12 +22,16 @@ env:
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   CACHE_TOOLCHAIN: true
+  FIRMWARE_RELEASE: true
+  FIRMWARE_TAG: X86_64
+  DEVICE_TARGET: x86
   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
   PASSWORD: ${{ secrets.PASSWORD }}
   REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
   REMOTE_PORT: ${{ secrets.REMOTE_PORT }}
   DOCKER_ID: ${{ secrets.DOCKER_ID }}
   DOCKER_PASSWD: ${{ secrets.DOCKER_PASSWD }}  
+  
   TZ: Asia/Shanghai
 
 jobs:
@@ -75,6 +79,7 @@ jobs:
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
+        echo "OPENWRT_PATH=$PWD" >> $GITHUB_ENV
         git clone https://github.com/wkao2077/opconfig
         sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
         
@@ -120,7 +125,7 @@ jobs:
       with:
         ccache: 'false'
         mixkey: 'lean-x86'
-        prefix: ${{ github.workspace }}/openwrt
+        prefix: ${{ env.OPENWRT_PATH }}
     
     - name: Check space usage
       run: |
