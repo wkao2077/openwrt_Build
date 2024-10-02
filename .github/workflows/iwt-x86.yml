@@ -42,7 +42,8 @@ jobs:
       fail-fast: false
       matrix:
         target: [iwt-x86]
-
+        
+    steps:
     - name: Initialization environment
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -64,7 +65,7 @@ jobs:
         temp-reserve-mb: 100
         root-reserve-mb: 1024
 
-    steps:
+
     - name: Checkout
       uses: actions/checkout@main
 
