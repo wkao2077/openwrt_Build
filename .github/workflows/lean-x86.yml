@@ -126,6 +126,9 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./${{matrix.target}}.sh && ./${{matrix.target}}.sh
         cd openwrt
+        rm -rf feeds/packages/lang/golang
+        git clone https://github.com/kenzok8/golang feeds/packages/lang/golang
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
         ./scripts/feeds update -a && ./scripts/feeds install -a
         cp -f opconfig/wkao/${{matrix.target}}.config .config && make defconfig
         
