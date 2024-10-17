@@ -31,4 +31,3 @@ rm -rf openwrt/package/nas/network/services/webdav2
 # 主题
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon openwrt/package/feeds/luci/luci-theme-argon
 git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-app-argon-config openwrt/package/feeds/luci/luci-app-argon-config
-git clone --depth=1 -b main https://github.com/sirpdboy/luci-theme-kucat openwrt/package/feeds/luci/luci-theme-kucat
