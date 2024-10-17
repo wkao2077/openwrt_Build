@@ -114,7 +114,6 @@ jobs:
         mixkey: 'lean-x86'
         prefix: ${{ env.OPENWRT_PATH }}
 
-
     - name: Update feeds
       working-directory: ./openwrt
       run: |
@@ -133,7 +132,7 @@ jobs:
     - name: Download package
       working-directory: ./openwrt
       run: |
-        make download -j$(($(nproc)+1))
+        make download -j$(nproc)
         find dl -size -1024c -exec rm -f {} \;
         
     - name: Check space usage
