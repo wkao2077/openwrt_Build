@@ -99,12 +99,12 @@ jobs:
       env: 
         REPO_URL: https://github.com/coolsnowwolf/lede
         REPO_BRANCH: master
+        TZ: Asia/Shanghai        
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
         cd openwrt
         echo "OPENWRT_PATH=$PWD" >> $GITHUB_ENV
         git clone https://github.com/wkao2077/opconfig
-        sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
         
     - name: Cache Toolchain
       if: env.CACHE_TOOLCHAIN == 'true'
@@ -127,12 +127,8 @@ jobs:
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./${{matrix.target}}.sh && ./${{matrix.target}}.sh
         cd openwrt
-        rm -rf feeds/smpackage/{base-files,dnsmasq,luci-theme-kucat,firewall*,fullconenat,libnftnl,natflow,nftables,ppp,opkg,ucl,upx,vsftpd*,miniupnpd-iptables,wireless-regdb}
-        sed -i 's/luci-theme-bootstrap/luci-theme-argone/g' feeds/luci/collections/luci/Makefile
-        ./scripts/feeds update -a 
-        sed -i 's#GO_PKG_TARGET_VARS.*# #g' feeds/packages/utils/v2dat/Makefile
-        ./scripts/feeds install -a
-        rm -rf .config
+        sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
+        ./scripts/feeds update -a && ./scripts/feeds install -a
         cp -f opconfig/wkao/${{matrix.target}}.config .config && make defconfig
         
     - name: Download package
@@ -261,5 +257,3 @@ jobs:
         name: ${{ env.date2 }} ${{matrix.target}}
         tag_name: ${{ env.date }}_${{matrix.target}}
         body_path: release.txt
-
-        
