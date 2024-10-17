@@ -26,7 +26,7 @@ rm -rf openwrt/package/nas/network/services/webdav2
 
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages openwrt/package/openwrt-passwall
 # git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall openwrt/package/luci-app-passwall
-git clone --depth=1 https://github.com/fw876/helloworld openwrt/package/feeds/luci/luci-app-ssr-plus
+git clone --depth=1 -b master https://github.com/fw876/helloworld openwrt/package/feeds/luci/luci-app-ssr-plus
 
 
 # 主题
