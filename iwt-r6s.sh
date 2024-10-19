@@ -19,7 +19,7 @@ rm -rf openwrt/package/nas/network/services/webdav2
 
 # 科学上网
 # git clone --depth=1 https://github.com/fw876/helloworld openwrt/package/feeds/luci/luci-app-ssr-plus
-# git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2 openwrt/package/feeds/luci/luci-app-passwall2
+git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2 openwrt/package/feeds/luci/luci-app-passwall2
 # git clone --depth=1 -b master https://github.com/vernesong/OpenClash openwrt/package/feeds/luci/luci-app-openclash
 
 # 主题
