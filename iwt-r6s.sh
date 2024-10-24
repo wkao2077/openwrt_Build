@@ -1,7 +1,7 @@
 #!/bin/bash
 #===============================================
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.1.251/g' openwrt/package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.77.2/g' openwrt/package/base-files/files/bin/config_generate
 
 # 添加额外插件
 git clone --depth=1 -b master https://github.com/linkease/nas-packages openwrt/package/nas
