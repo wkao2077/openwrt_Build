@@ -7,7 +7,7 @@ sed -i 's/192.168.1.1/192.168.77.2/g' openwrt/package/base-files/files/bin/confi
 
 
 # 科学上网
-git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2 openwrt/package/feeds/luci/luci-app-passwall2
+# git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2 openwrt/package/feeds/luci/luci-app-passwall2
 # git clone --depth=1 -b main https://github.com/morytyann/OpenWrt-mihomo openwrt/package/luci-app-mihomo
 
 # 主题
