@@ -9,7 +9,7 @@ git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice openwrt/
 
 # 科学上网
 # git clone --depth=1 -b main https://github.com/xiaorouji/openwrt-passwall2 openwrt/package/feeds/luci/luci-app-passwall2
-git clone --depth=1 -b main https://github.com/morytyann/OpenWrt-mihomo openwrt/package/luci-app-mihomo
+git clone --depth=1 -b main https://github.com/nikkinikki-org/OpenWrt-nikki openwrt/package/luci-app-nikki
 
 # 主题
 # git clone --depth=1 -b js https://github.com/kenzok78/luci-theme-design openwrt/package/feeds/luci/luci-theme-design
